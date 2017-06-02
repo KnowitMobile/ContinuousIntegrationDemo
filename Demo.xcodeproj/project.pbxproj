@@ -12,7 +12,18 @@
 		DA159B041EE1842100529F24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA159B021EE1842100529F24 /* Main.storyboard */; };
 		DA159B061EE1842100529F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA159B051EE1842100529F24 /* Assets.xcassets */; };
 		DA159B091EE1842100529F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA159B071EE1842100529F24 /* LaunchScreen.storyboard */; };
+		DA159B171EE1848E00529F24 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159B161EE1848E00529F24 /* DemoUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA159B191EE1848E00529F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA159AF31EE1842100529F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA159AFA1EE1842100529F24;
+			remoteInfo = Demo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DA159AFB1EE1842100529F24 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +33,20 @@
 		DA159B051EE1842100529F24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA159B081EE1842100529F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA159B0A1EE1842100529F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA159B141EE1848E00529F24 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA159B161EE1848E00529F24 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
+		DA159B181EE1848E00529F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA159AF81EE1842100529F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA159B111EE1848E00529F24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				DA159AFD1EE1842100529F24 /* Demo */,
+				DA159B151EE1848E00529F24 /* DemoUITests */,
 				DA159AFC1EE1842100529F24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				DA159AFB1EE1842100529F24 /* Demo.app */,
+				DA159B141EE1848E00529F24 /* DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +85,15 @@
 				DA159B0A1EE1842100529F24 /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		DA159B151EE1848E00529F24 /* DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA159B161EE1848E00529F24 /* DemoUITests.swift */,
+				DA159B181EE1848E00529F24 /* Info.plist */,
+			);
+			path = DemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +116,24 @@
 			productReference = DA159AFB1EE1842100529F24 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DA159B131EE1848E00529F24 /* DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA159B1B1EE1848E00529F24 /* Build configuration list for PBXNativeTarget "DemoUITests" */;
+			buildPhases = (
+				DA159B101EE1848E00529F24 /* Sources */,
+				DA159B111EE1848E00529F24 /* Frameworks */,
+				DA159B121EE1848E00529F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA159B1A1EE1848E00529F24 /* PBXTargetDependency */,
+			);
+			name = DemoUITests;
+			productName = DemoUITests;
+			productReference = DA159B141EE1848E00529F24 /* DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +148,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 9NE55C4QYA;
 						ProvisioningStyle = Automatic;
+					};
+					DA159B131EE1848E00529F24 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 92R23WEN26;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DA159AFA1EE1842100529F24;
 					};
 				};
 			};
@@ -115,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				DA159AFA1EE1842100529F24 /* Demo */,
+				DA159B131EE1848E00529F24 /* DemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +187,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA159B121EE1848E00529F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,7 +206,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA159B101EE1848E00529F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA159B171EE1848E00529F24 /* DemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA159B1A1EE1848E00529F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA159AFA1EE1842100529F24 /* Demo */;
+			targetProxy = DA159B191EE1848E00529F24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DA159B021EE1842100529F24 /* Main.storyboard */ = {
@@ -283,6 +363,32 @@
 			};
 			name = Release;
 		};
+		DA159B1C1EE1848E00529F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 92R23WEN26;
+				INFOPLIST_FILE = DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = knowit.DemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Demo;
+			};
+			name = Debug;
+		};
+		DA159B1D1EE1848E00529F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 92R23WEN26;
+				INFOPLIST_FILE = DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = knowit.DemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Demo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -300,6 +406,14 @@
 			buildConfigurations = (
 				DA159B0E1EE1842100529F24 /* Debug */,
 				DA159B0F1EE1842100529F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA159B1B1EE1848E00529F24 /* Build configuration list for PBXNativeTarget "DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA159B1C1EE1848E00529F24 /* Debug */,
+				DA159B1D1EE1848E00529F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
