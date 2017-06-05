@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NameInputViewController: UIViewController {
 
     @IBOutlet weak var nameError: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBAction func submitTapped(_ sender: Any) {
-        let isValid = validateName(name: nameTextField.text!)
+        let isValid = NameInputViewController.validateName(name: nameTextField.text!)
         
         if isValid {
             nameError.isHidden = true
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func validateName(name: String) -> Bool {
+    static func validateName(name: String) -> Bool {
         let components = name.components(separatedBy: " ")
         
         guard components.count == 2 else { return false }

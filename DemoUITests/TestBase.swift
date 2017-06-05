@@ -19,7 +19,7 @@ class TestBase: XCTestCase{
     
     override func tearDown() {
         
-        
+        let semaphore = DispatchSemaphore(value: 0)
         let device = UIDevice.current.localizedModel
         let os = UIDevice.current.systemVersion
         let isSuccess = testRun?.failureCount == 0
@@ -35,13 +35,20 @@ class TestBase: XCTestCase{
             ]
         let json = try! JSONSerialization.data(withJSONObject: jsonObject, options: [])
         //if !isSuccess{//Only send if there was an error
-            var request = URLRequest(url: URL(string: url)!)
-            request.httpMethod = "POST"
-            request.httpBody = json
-            
-            let task = URLSession.shared.dataTask(with: request)
-            task.resume()
-        //}
+        
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "POST"
+        request.httpBody = json
+        request.timeoutInterval = 5
+        
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            semaphore.signal()
+        }
+        task.resume()
+        
+        semaphore.wait()
         failiures = []
         super.tearDown()
     }

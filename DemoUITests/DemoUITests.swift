@@ -18,7 +18,7 @@ class DemoUITests: TestBase {
     
     func testExample() {
         
-        //Make sure the button works
+        //Make sure the button and validation error works
         
         
         let app = XCUIApplication()
@@ -38,10 +38,6 @@ class DemoUITests: TestBase {
         
         
         XCTAssert(app.staticTexts["Enter your name"].exists)
-        
-        
-        
-    
     }
     
 }
