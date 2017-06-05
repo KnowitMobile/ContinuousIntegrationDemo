@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,49 +23,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZG-he-1FS">
-                                <rect key="frame" x="162.5" y="615" width="49" height="30"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="submitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8Q-AD-gsS"/>
-                                    <segue destination="Wz7-Jz-f4d" kind="show" id="xlE-br-ndS"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knowit" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-2i-lte">
-                                <rect key="frame" x="93.5" y="178" width="187.5" height="187.5"/>
+                                <rect key="frame" x="93.5" y="74" width="187.5" height="187.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tJ6-2i-lte" secondAttribute="height" multiplier="1:1" id="oAO-r9-Wz4"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0T-yQ-I8u">
-                                <rect key="frame" x="40" y="577" width="295" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zw8-eB-v5H">
-                                <rect key="frame" x="124.5" y="548" width="125.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RzP-gJ-ujV">
+                                <rect key="frame" x="19" y="331.5" width="337.5" height="116"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zw8-eB-v5H">
+                                        <rect key="frame" x="106" y="0.0" width="125.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter first and last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWP-Zq-jPC">
+                                        <rect key="frame" x="76" y="25.5" width="186" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0T-yQ-I8u">
+                                        <rect key="frame" x="0.0" y="51" width="337.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZG-he-1FS">
+                                        <rect key="frame" x="144.5" y="86" width="49" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8Q-AD-gsS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QZG-he-1FS" firstAttribute="top" secondItem="q0T-yQ-I8u" secondAttribute="bottom" constant="8" id="23j-hG-HGO"/>
                             <constraint firstItem="tJ6-2i-lte" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="5U9-h2-Nke"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QZG-he-1FS" secondAttribute="bottom" constant="22" id="N9O-hQ-Ee5"/>
-                            <constraint firstItem="Zw8-eB-v5H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QQa-Ms-y96"/>
+                            <constraint firstItem="RzP-gJ-ujV" firstAttribute="top" secondItem="tJ6-2i-lte" secondAttribute="bottom" constant="70" id="6XI-sf-L3g"/>
+                            <constraint firstItem="RzP-gJ-ujV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9da-d6-5Uj"/>
                             <constraint firstItem="tJ6-2i-lte" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuI-Ol-fGT"/>
-                            <constraint firstItem="q0T-yQ-I8u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="Rhs-pb-qy5"/>
-                            <constraint firstItem="QZG-he-1FS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="900" constant="551" id="bN6-IU-Npk"/>
-                            <constraint firstItem="q0T-yQ-I8u" firstAttribute="top" secondItem="Zw8-eB-v5H" secondAttribute="bottom" constant="8" id="bm4-dY-uXY"/>
-                            <constraint firstItem="QZG-he-1FS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cHl-0C-Nee"/>
-                            <constraint firstItem="tJ6-2i-lte" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="hUe-cf-xI0"/>
-                            <constraint firstItem="q0T-yQ-I8u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vPv-pc-19O"/>
+                            <constraint firstItem="q0T-yQ-I8u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Ssy-xe-bCY"/>
+                            <constraint firstItem="tJ6-2i-lte" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="hUe-cf-xI0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uxU-fU-zHP"/>
+                    <connections>
+                        <outlet property="nameError" destination="DWP-Zq-jPC" id="JT0-u7-6s4"/>
+                        <outlet property="nameTextField" destination="q0T-yQ-I8u" id="eq3-OM-O2g"/>
+                        <segue destination="Wz7-Jz-f4d" kind="show" identifier="showWorksScreen" id="o0Z-PJ-KY8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

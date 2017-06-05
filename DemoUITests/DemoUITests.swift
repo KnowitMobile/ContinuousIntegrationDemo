@@ -20,12 +20,25 @@ class DemoUITests: TestBase {
         
         //Make sure the button works
         
-        XCUIDevice.shared().orientation = .portrait
         
         let app = XCUIApplication()
-        app.buttons["Important button"].tap()
-        XCTAssert( app.staticTexts["Works"].exists )
+        let textField = app.textFields.element(boundBy: 0)
+        
+        textField.tap()
+        textField.typeText("test")
+        app.buttons["Submit"].tap()
+        XCTAssert(app.staticTexts["Enter first and last name"].exists)
+        
+        
+        textField.typeText(" test")
+        app.buttons["Submit"].tap()
+        
+        XCTAssert(app.staticTexts["Works"].exists)
         app.navigationBars["UIView"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0).tap()
+        
+        
+        XCTAssert(app.staticTexts["Enter your name"].exists)
+        
         
         
     

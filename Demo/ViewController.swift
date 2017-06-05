@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameError: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
     
     @IBAction func submitTapped(_ sender: Any) {
+        let isValid = validateName(name: nameTextField.text!)
         
+        if isValid {
+            nameError.isHidden = true
+            performSegue(withIdentifier: "showWorksScreen", sender: sender)
+        } else {
+            UIView.animate(withDuration: 0.2){
+                self.nameError.isHidden = false
+            }
+        }
     }
     
     func validateName(name: String) -> Bool {
         let components = name.components(separatedBy: " ")
         
-        guard let components.count == 2 else { return false }
+        guard components.count == 2 else { return false }
         
+        return true
     }
 
 }
