@@ -33,15 +33,15 @@ class TestBase: XCTestCase{
                 "color": isSuccess ? "good" : "danger"
                 ]]
             ]
-        let json = JSONSerialization.data(withJSONObject: jsonObject, options: nil)
-        if !isSuccess{//Only send if there was an error
+        let json = try! JSONSerialization.data(withJSONObject: jsonObject, options: [])
+        //if !isSuccess{//Only send if there was an error
             var request = URLRequest(url: URL(string: url)!)
             request.httpMethod = "POST"
             request.httpBody = json
             
             let task = URLSession.shared.dataTask(with: request)
             task.resume()
-        }
+        //}
         failiures = []
         super.tearDown()
     }
