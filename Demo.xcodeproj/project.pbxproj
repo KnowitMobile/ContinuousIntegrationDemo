@@ -13,6 +13,7 @@
 		DA159B061EE1842100529F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA159B051EE1842100529F24 /* Assets.xcassets */; };
 		DA159B091EE1842100529F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA159B071EE1842100529F24 /* LaunchScreen.storyboard */; };
 		DA159B171EE1848E00529F24 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159B161EE1848E00529F24 /* DemoUITests.swift */; };
+		DAA128261EE58A530005C2A4 /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA128251EE58A530005C2A4 /* TestBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DA159B141EE1848E00529F24 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA159B161EE1848E00529F24 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		DA159B181EE1848E00529F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA128251EE58A530005C2A4 /* TestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				DA159B161EE1848E00529F24 /* DemoUITests.swift */,
+				DAA128251EE58A530005C2A4 /* TestBase.swift */,
 				DA159B181EE1848E00529F24 /* Info.plist */,
 			);
 			path = DemoUITests;
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA128261EE58A530005C2A4 /* TestBase.swift in Sources */,
 				DA159B171EE1848E00529F24 /* DemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +412,7 @@
 				DA159B0F1EE1842100529F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA159B1B1EE1848E00529F24 /* Build configuration list for PBXNativeTarget "DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +421,7 @@
 				DA159B1D1EE1848E00529F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

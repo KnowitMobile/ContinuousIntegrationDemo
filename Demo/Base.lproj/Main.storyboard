@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,11 +30,20 @@
                                     <segue destination="Wz7-Jz-f4d" kind="show" id="xlE-br-ndS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knowit" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-2i-lte">
+                                <rect key="frame" x="93.5" y="178" width="187.5" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tJ6-2i-lte" secondAttribute="height" multiplier="1:1" id="oAO-r9-Wz4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tJ6-2i-lte" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="5U9-h2-Nke"/>
+                            <constraint firstItem="tJ6-2i-lte" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuI-Ol-fGT"/>
                             <constraint firstItem="QZG-he-1FS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="551" id="bN6-IU-Npk"/>
                             <constraint firstItem="QZG-he-1FS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cHl-0C-Nee"/>
+                            <constraint firstItem="tJ6-2i-lte" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="hUe-cf-xI0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uxU-fU-zHP"/>
@@ -90,4 +101,7 @@
             <point key="canvasLocation" x="242" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="knowit" width="200" height="200"/>
+    </resources>
 </document>
