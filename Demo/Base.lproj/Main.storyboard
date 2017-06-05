@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RzP-gJ-ujV">
-                                <rect key="frame" x="19" y="331.5" width="337.5" height="116"/>
+                                <rect key="frame" x="19" y="271.5" width="337.5" height="116"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zw8-eB-v5H">
                                         <rect key="frame" x="106" y="0.0" width="125.5" height="20.5"/>
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tJ6-2i-lte" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="5U9-h2-Nke"/>
-                            <constraint firstItem="RzP-gJ-ujV" firstAttribute="top" secondItem="tJ6-2i-lte" secondAttribute="bottom" constant="70" id="6XI-sf-L3g"/>
+                            <constraint firstItem="RzP-gJ-ujV" firstAttribute="top" secondItem="tJ6-2i-lte" secondAttribute="bottom" constant="10" id="6XI-sf-L3g"/>
                             <constraint firstItem="RzP-gJ-ujV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9da-d6-5Uj"/>
                             <constraint firstItem="tJ6-2i-lte" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuI-Ol-fGT"/>
                             <constraint firstItem="q0T-yQ-I8u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Ssy-xe-bCY"/>
